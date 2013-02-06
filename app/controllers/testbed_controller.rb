@@ -1,5 +1,7 @@
 class TestbedController < ApplicationController
   def index
-    @result = 'Hello!'
+    @msg = 'instance!'
+    flash.now[:msg] = 'flash!'
+    session[:msg] = 'session!'
   end
 end
